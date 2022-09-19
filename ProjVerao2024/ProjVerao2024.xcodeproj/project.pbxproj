@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7113E30828D8EB7A00062C26 /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113E30728D8EB7A00062C26 /* EditFoodView.swift */; };
 		7120C39A28D3B71F00C913E4 /* ProjVerao2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120C39928D3B71F00C913E4 /* ProjVerao2024App.swift */; };
 		7120C39C28D3B71F00C913E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120C39B28D3B71F00C913E4 /* ContentView.swift */; };
 		7120C39E28D3B71F00C913E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7120C39D28D3B71F00C913E4 /* Assets.xcassets */; };
 		7120C3A128D3B71F00C913E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7120C3A028D3B71F00C913E4 /* Preview Assets.xcassets */; };
 		7120C3AC28D3B89200C913E4 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7120C3AA28D3B89200C913E4 /* FoodModel.xcdatamodeld */; };
 		7120C3AF28D3BD2C00C913E4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7120C3AE28D3BD2C00C913E4 /* DataController.swift */; };
+		71C67E8E28D505E800D53144 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C67E8D28D505E800D53144 /* AddFoodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7113E30728D8EB7A00062C26 /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		7120C39628D3B71F00C913E4 /* ProjVerao2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjVerao2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7120C39928D3B71F00C913E4 /* ProjVerao2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjVerao2024App.swift; sourceTree = "<group>"; };
 		7120C39B28D3B71F00C913E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +26,7 @@
 		7120C3A028D3B71F00C913E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7120C3AB28D3B89200C913E4 /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		7120C3AE28D3BD2C00C913E4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = ProjVerao2024/DataController.swift; sourceTree = SOURCE_ROOT; };
+		71C67E8D28D505E800D53144 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 		7120C38D28D3B71F00C913E4 = {
 			isa = PBXGroup;
 			children = (
+				7113E30728D8EB7A00062C26 /* EditFoodView.swift */,
 				7120C39828D3B71F00C913E4 /* ProjVerao2024 */,
 				7120C39728D3B71F00C913E4 /* Products */,
 			);
@@ -58,6 +63,7 @@
 				7120C3AD28D3BB8800C913E4 /* DataModel */,
 				7120C39928D3B71F00C913E4 /* ProjVerao2024App.swift */,
 				7120C39B28D3B71F00C913E4 /* ContentView.swift */,
+				71C67E8D28D505E800D53144 /* AddFoodView.swift */,
 				7120C39D28D3B71F00C913E4 /* Assets.xcassets */,
 				7120C39F28D3B71F00C913E4 /* Preview Content */,
 			);
@@ -151,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C67E8E28D505E800D53144 /* AddFoodView.swift in Sources */,
 				7120C39C28D3B71F00C913E4 /* ContentView.swift in Sources */,
+				7113E30828D8EB7A00062C26 /* EditFoodView.swift in Sources */,
 				7120C3AF28D3BD2C00C913E4 /* DataController.swift in Sources */,
 				7120C39A28D3B71F00C913E4 /* ProjVerao2024App.swift in Sources */,
 				7120C3AC28D3B89200C913E4 /* FoodModel.xcdatamodeld in Sources */,
