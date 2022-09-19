@@ -19,7 +19,6 @@ import CoreData
  SortDescriptor serve para descrever como vc quer ordenar os dados
  
  */
-
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -43,7 +42,7 @@ struct ContentView: View {
                         
                         NavigationLink(destination: EditFoodView( isAddView: $isAddView, food: foodElement )){
                             
-                            FoodDetailView(foodName: foodElement.name ??  "", foodCalories: foodElement.calories)
+                            FoodDetailView(foodName: foodElement.name ??  "", foodCalories: foodElement.calories, foodDate: foodElement.date ?? Date())
                             
                         }// NavigationLink
                         
@@ -72,7 +71,7 @@ struct ContentView: View {
     
     func deleteFood(offset:IndexSet) {
         DataController().deleteFood(offsets: offset, context: managedObjectContext, food: food)
-    }
+    } // deleteFood
     
     func getTotalCalories() -> Double{
         
@@ -88,19 +87,25 @@ struct ContentView: View {
                     sum += item.calories
                 }
             }
-            
+            // Kcal
         }
         
         return sum
-    }
+    } // getTotalCalories
+    
+    // 30 segundos atrás
+    
+
 }
 
 struct FoodDetailView : View{
     
     var foodName : String = ""
     var foodCalories : Double = 0.0
+    var foodDate : Date = Date()
     
     var body: some View{
+        
         HStack{
             
             // nome e calorias um embaixo do outro
@@ -111,7 +116,32 @@ struct FoodDetailView : View{
                 Text("\(Int(foodCalories))  ") + Text("calories").foregroundColor(.red)
             }// VSTACK
             
+            Spacer()
+            
+            Text( calcTimeSince(date:foodDate) )
+            
+            
         }// HStack
+    }
+}
+
+func calcTimeSince(date : Date) -> String{
+    
+    // return date.formatted()
+    
+    // quantos minutos se passaram da data de parâmetro até agora
+    let minutes = Int(-date.timeIntervalSinceNow)/60
+    let hours = minutes / 60
+    let days = hours / 24
+    
+    if minutes < 120 {
+        return "\(minutes) minutos atrás"
+    }
+    else if (minutes >= 120 && hours < 48){
+        return "\(hours) horas atrás"
+    }
+    else {
+        return "\(days) dias atrás"
     }
 }
 
